@@ -1,0 +1,48 @@
+html {
+  overflow:scroll;
+}
+
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+
+h1 {
+  position: aboslute;
+  display: block;
+  margin-left: 70px;
+}
+
+/*C'est pour la carte*/
+svg {
+  display: block;
+  margin: auto;
+}
+.country {
+  stroke: black;
+  stroke-width: 0.09px;
+}
+.country:hover {
+  fill: violet;
+}
+.sphere {
+  fill: darkcyan;
+}
+.tick text {
+  font-size: 0.7em;
+  fill: black;
+  font-family: sans-serif;
+}
+.tick circle {
+  stroke: black;
+  stroke-opacity: 0.5;
+}
+
+/*Ceci pour le barChart*/
+.bar:hover {
+  fill:aqua;
+}
+
+#barChart {
+  border:1px solid blue;
+}
