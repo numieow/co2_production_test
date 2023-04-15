@@ -5,7 +5,7 @@ export const loadAndProcessData = () =>
     //On import le json avec les frontières
     d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'), 
     //On import le csv avec les données qu'on veut, dans lequel on va filtrer pour n'avoir que ce qu'on veut
-    d3.csv('static/data/owid-co2-data.csv')
+    d3.csv('../static/data/owid-co2-data.csv')
 ])
     .then(([csvData, topoJSONdata, csvCO2]) => {
 
@@ -18,7 +18,7 @@ export const loadAndProcessData = () =>
 
         const csv_done = {};
         csvCO2.forEach(d => {
-            if (d.iso_code && d.year == 2018) {
+            if (d.iso_code && d.year == 2021) {
                 if (iso_alpha3[d.iso_code]) {
                     const code = iso_alpha3[d.iso_code].code;
                     const co2 = parseFloat(d.co2) || 0;
